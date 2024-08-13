@@ -12,7 +12,7 @@ project(follyexample CXX)
 find_package(folly REQUIRED)
 
 add_executable(follyexample
-    src/DetachOnCancel.cpp
+    src/follyexample.cpp
 )
 
 target_link_libraries(follyexample

@@ -1,4 +1,6 @@
 build
+setenvs.sh
+.cache
 
 # Prerequisites
 *.d
