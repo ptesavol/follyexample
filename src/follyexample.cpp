@@ -22,6 +22,8 @@
 #include <folly/experimental/coro/Task.h>
 #include <folly/experimental/coro/Timeout.h>
 #include <folly/experimental/coro/BlockingWait.h>
+#include <folly/init/Init.h>
+
 
 using namespace std::literals::chrono_literals;
 
@@ -54,7 +56,8 @@ folly::coro::Task<> demoDetachOnCancel() {
     co_return;
 }
 
-int main() {
+int main(int argc, char* argv[]) {
+    folly::Init init(&argc, &argv);
     folly::coro::blockingWait(demoDetachOnCancel());
     return 0;
 }
